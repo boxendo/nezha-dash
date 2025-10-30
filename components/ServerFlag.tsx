@@ -40,6 +40,10 @@ export default function ServerFlag({
 
   if (!country_code) return null
 
+  if (supportsEmojiFlags && country_code.toLowerCase() === "tw") {
+    country_code = "cn"
+  }
+  
   const normalizedUpper = country_code.toUpperCase()
   const normalizedLower = country_code.toLowerCase()
 
